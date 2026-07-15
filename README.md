@@ -58,6 +58,10 @@ See [examples/gerber_client.py](examples/gerber_client.py) (Python client),
 [examples/curl.md](examples/curl.md) (raw curl), and
 [examples/home_assistant.md](examples/home_assistant.md) (HA `rest_command` sketch).
 
+**Home Assistant users:** there is now a ready-made **MQTT bridge with HA discovery**
+(switches + positional shutter covers, availability, no HA YAML needed):
+**[gerber-prime-6000-mqtt-bridge](https://github.com/danielrosehill/gerber-prime-6000-mqtt-bridge)**.
+
 ## Hard-won gotchas
 
 - **Request encoding for `/sdk.cgi`:** the UI sends `POST` with a single form field

@@ -1,5 +1,16 @@
 # Home Assistant integration (sketch)
 
+> **Recommended path:** use the dedicated
+> [gerber-prime-6000-mqtt-bridge](https://github.com/danielrosehill/gerber-prime-6000-mqtt-bridge)
+> instead — MQTT discovery auto-creates switches + positional shutter covers, with
+> availability, and needs no HA YAML. The sketch below is the raw-YAML alternative (note:
+> HA 2024.x+ removed the legacy template switch/cover platform syntax this sketch used, so
+> adapt to the modern `template:` format if you go this way).
+
+Shutter semantics (since confirmed from the UI JS): roller-shutter channels are
+**positional** — `switch` with `val` 0–99 (0 = closed); the controller does the time-based
+travel itself. **There is no stop command.**
+
 The controller exposes on/off relays over `/sdk.cgi`, so you can drive them from HA with
 `rest_command` + a `command_line`/`rest` sensor for state. Because the `json` field is
 double-encoded and the values are fixed per channel, the simplest approach is a **precomputed
