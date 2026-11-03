@@ -11,6 +11,8 @@ device's own web UI — there is no official public API doc.
 > ⚠️ Unofficial and community-maintained. Not affiliated with or endorsed by Gerber. Use at
 > your own risk — the `switch` command actuates real relays/shutters.
 
+**Write-up:** [Gerber Prime 6000 in Home Assistant: local control, no cloud](https://blog.danielrosehill.com/posts/gerber-prime-6000-home-assistant-local-control-xwjj6i/) — the full step-by-step walkthrough.
+
 ## What device is this?
 
 - Vendor: **Gerber Prime** (gerber-home.net / gerberprime.com), phone app **"Home Mate 2"**.
